@@ -1,0 +1,31 @@
+{
+  "name": "umeed",
+  "version": "1.0.0",
+  "description": "This is mern website. The purpose of website is to provide help to need old age people and also connect with people who wants to contribute to help this to make their life easier",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hex-Clan-2-0/Umeed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hex-Clan-2-0/Umeed/issues"
+  },
+  "homepage": "https://github.com/Hex-Clan-2-0/Umeed#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
