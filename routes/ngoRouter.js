@@ -30,6 +30,7 @@ router.get('/:city', (req, res) => {
     const { city } = req.params
     cities.find({ 'city': city })
         .then(response => {
+            // console.log(response)
             res.status(200).json(response);
         }).catch(err => {
             res.status(404).json({
