@@ -5,6 +5,8 @@ import NgoList from "./components/Ngo";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import RegisterNGO from "./components/auth/RegisterNGO";
 import { initializeApp } from "firebase/app";
+import SignupNGO from "./components/SignupNGO";
+import LoginNGO from "./components/LoginNGO";
 const firebaseConfig = {
   apiKey: "AIzaSyCA70cqobYrO5YllbZsLxY8DpBE27kc1UQ",
   authDomain: "umeed-001.firebaseapp.com",
@@ -23,7 +25,8 @@ function App() {
         <Route path="/" exact component={Land} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/ngo" exact component={NgoList} />
-        <Route path="/ngo/register" exact component={RegisterNGO} />
+        <Route path="/ngo/login" exact component={LoginNGO} />
+        <Route path="/ngo/register" exact component={SignupNGO} />
       </Switch>
     </Router>
   );
