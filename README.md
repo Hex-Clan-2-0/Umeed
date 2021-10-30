@@ -1,2 +1,2 @@
 # Umeed
-This is mern website. The purpose of website is to provide help to need old age people and also connect with people who wants to contribute to help this to make their life easier
+This is a MERN application built to bridge the gap between people and the NGOs offering help in a particular city.
