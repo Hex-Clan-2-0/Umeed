@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Land from './components/Land';
 import Contact from './components/Contact';
@@ -15,12 +14,12 @@ import {
 function App() {
   return (
     <Router>
-    <Switch>
-    <Route path="/" exact component={Land} />
-    <Route path="/contact" exact component={Contact} />
-    <Route path="/ngo" exact component={NgoList} />
-    </Switch>
- </Router>
+      <Switch>
+        <Route path="/" exact component={Land} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/ngo" exact component={NgoList} />
+      </Switch>
+    </Router>
   );
 }
 
