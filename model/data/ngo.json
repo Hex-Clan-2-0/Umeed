@@ -1,0 +1,122 @@
+[
+    {
+        "name": "EESHA (A Social Welfare Society)",
+        "email": "esha@yahoo.co.in",
+        "telephone": "9774622190",
+        "address": {
+            "city": "Agartala",
+            "state": "Tripura",
+            "pincode": "799046"
+        }
+    },
+    {
+        "name": "Abhoy Mission",
+        "email": "am@gmail.com",
+        "telephone": "03812338607",
+        "address": {
+            "city": "Agartala",
+            "state": "Tripura",
+            "pincode": "799001"
+        }
+    },
+    {
+        "name": "Ganadoot Social Welfare Centre",
+        "email": "esha@yahoo.co.in",
+        "telephone": "03812304369",
+        "address": {
+            "city": "Agartala",
+            "state": "Tripura",
+            "pincode": "756046"
+        }
+    },
+    {
+        "name": "Help Foundation of Tripura",
+        "email": "help_foundation@rediffmail.com",
+        "telephone": "9436451292",
+        "address": {
+            "city": "Agartala",
+            "state": "Tripura",
+            "pincode": "799676"
+        }
+    },
+    {
+        "name": "Kendrabindyu Welfare Society",
+        "email": "kwshelp@gmaiil.com",
+        "telephone": "7005753018",
+        "address": {
+            "city": "Agartala",
+            "state": "Tripura",
+            "pincode": "799046"
+        }
+    },
+    {
+        "name": "Tarang NGO",
+        "email": "tarang@gmail.com",
+        "telephone": "9912345783",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "230532"
+        }
+    },
+    {
+        "name": "Abhilasha Foundation",
+        "email": "abhilasha@gmail.com",
+        "telephone": "9612145783",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "40001"
+        }
+    },
+    {
+        "name": "Arpan",
+        "email": "arpan@mumbaigov.in",
+        "telephone": "9432145783",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "40002"
+        }
+    },
+    {
+        "name": "Apnalaya",
+        "email": "apnalaya@mumbaigov.in",
+        "telephone": "9422145813",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "40003"
+        }
+    },
+    {
+        "name": "Mother foundation",
+        "email": "mother@mumbaigov.in",
+        "telephone": "8422241813",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pincode": "40004"
+        }
+    },
+    {
+        "name": "Disha Gramin Vikas Manch",
+        "email": "http://dishagvm.org/",
+        "telephone": "9867836472",
+        "address": {
+            "city": "Bhagalpur",
+            "state": "Bihar",
+            "pincode": "812001"
+        }
+    },
+    {
+        "name": "Chetna Foundation",
+        "email": "http://www.cfcaunbound.org/",
+        "telephone": "9856735462",
+        "address": {
+            "city": "Bhagalpur",
+            "state": "Bihar",
+            "pincode": "111245"
+        }
+    }
+]
