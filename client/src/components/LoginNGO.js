@@ -12,7 +12,7 @@ function LoginNGO({ history }) {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        history.push("/");
+        history.push("/welcome");
       })
       .catch((error) => {
         //show errors

@@ -9,6 +9,7 @@ import SignupNGO from "./components/SignupNGO";
 import LoginNGO from "./components/LoginNGO";
 import SignupIndividual from "./components/SignupIndividual";
 import LoginIndividual from "./components/LoginIndividual";
+import Welcome from "./components/Welcome";
 const firebaseConfig = {
   apiKey: "AIzaSyCA70cqobYrO5YllbZsLxY8DpBE27kc1UQ",
   authDomain: "umeed-001.firebaseapp.com",
@@ -26,6 +27,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Land} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/welcome" exact component={Welcome} />
         <Route path="/ngo" exact component={NgoList} />
         <Route path="/ngo/login" exact component={LoginNGO} />
         <Route path="/ngo/register" exact component={SignupNGO} />
