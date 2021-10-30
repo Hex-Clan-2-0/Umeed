@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './land.css';
 function Land() {
     return (
@@ -15,8 +16,8 @@ function Land() {
                     <h3>Connecting you with someone who cares.</h3>
                     <h2>Continue as:</h2>
                     <div class="buttons">
-                        <div class="loginD">NGO</div>
-                        <div class="loginP">Individual</div>
+                        <div class="loginD"> <Link to="/ngo/register"> NGO </Link> </div>
+                        <div class="loginP"> <Link to="/user/register"> Individual</Link> </div>
                     </div>
                 </div>
 
