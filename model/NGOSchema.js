@@ -17,7 +17,6 @@ const NGO = new mongoose.Schema({
         type: {
             city: String,
             state: String,
-            country: String,
             pincode: String
         },
         required: true

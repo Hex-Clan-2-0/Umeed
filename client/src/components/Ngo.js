@@ -1,60 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
 import "./Box.css";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import {BsTelephoneFill} from "react-icons/bs";
-import {MdEmail} from "react-icons/md"
+import { BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md"
 import { Link } from "react-router-dom";
+import axios from 'axios'
 const NgoList = () => {
-  const cardInfo = [
-   
-    {
-      image:
-        "https://cdn.vox-cdn.com/thumbor/M1qLla2h-V_2yV_Z4nF_NHH_tjA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18286450/usa_today_12495932.jpg",
-      title: "NGO Name",
-      address: "Dhaleshwar Road Number 2, Agartala",
-      phone:"1234567890",
-      email:"xyz@gmail.com"
-    },
+  const [state, setstate] = useState([])
 
-    {
-      image:
-        "https://cdn.vox-cdn.com/thumbor/M1qLla2h-V_2yV_Z4nF_NHH_tjA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18286450/usa_today_12495932.jpg",
-      title: "NGO Name",
-      address: "Dhaleshwar Road Number 2, Agartala",
-      phone:"1234567890",
-      email:"xyz@gmail.com"
-    },
-    {
-      image:
-        "https://cdn.vox-cdn.com/thumbor/M1qLla2h-V_2yV_Z4nF_NHH_tjA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18286450/usa_today_12495932.jpg",
-      title: "NGO Name",
-      address: "Dhaleshwar Road Number 2, Agartala",
-      phone:"1234567890",
-      email:"xyz@gmail.com"
-    }
-    
-   
-  ];
+  useEffect(() => {
+    axios.get('http://localhost:5000/ngo/Agartala').then(response => {
+      console.log(response.data[0].Ngo_collections)
+      setstate(response.data[0].Ngo_collections)
+    }).catch(error => {
+      console.log(error)
+    })
+  }, [])
 
-  const renderCard = (card, index) => {
-    return (
-      <Card style={{ width: "18rem" }} key={index} className="box text-center">
-        <Card.Img variant="top"  src={card.image} />
-        <Card.Body >
-          <Card.Title><strong>{card.title}</strong></Card.Title>
-          <Card.Text>{card.address}</Card.Text>
-          <Card.Text><BsTelephoneFill/> {card.phone}</Card.Text>
-          <Card.Text><MdEmail/> {card.email}</Card.Text>
-        </Card.Body>
-        <Link to ="/contact">
-        <Button style ={{marginBottom :10}} variant="primary">Contact</Button>
-        </Link>
-      </Card>
-    );
-  };
-
-  return <div className="grid">{cardInfo.map(renderCard)}</div>;
+  return (
+    <div className="grid">
+      {
+        state && state.map(card => {
+          return (
+            <Card style={{ width: "18rem" }} className="box text-center">
+              <Card.Img variant="top" src="https://image.freepik.com/free-vector/people-holding-heart-hand-icons_53876-66152.jpg" />
+              <Card.Body >
+                <Card.Title><strong>{card.name}</strong></Card.Title>
+                <Card.Text>{card.address.city}, {card.address.state}</Card.Text>
+                <Card.Text><BsTelephoneFill /> {card.telephone}</Card.Text>
+                <Card.Text><MdEmail /> {card.email}</Card.Text>
+              </Card.Body>
+              <Link to={{
+                pathname: "/contact",
+                state: card
+              }} >
+                <Button style={{ marginBottom: 10 }} variant="primary">Contact</Button>
+              </Link>
+            </Card>
+          );
+        })
+      }
+    </div>
+  );
 };
 
 export default NgoList;

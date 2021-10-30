@@ -33,6 +33,7 @@ function App() {
         <Route path="/ngo/register" exact component={SignupNGO} />
         <Route path="/user/register" exact component={SignupIndividual} />
         <Route path="/user/login" exact component={LoginIndividual} />
+        <Route path="/user/dashboard" exact component={Welcome} />
       </Switch>
     </Router>
   );

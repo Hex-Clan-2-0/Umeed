@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './contact.css';
+import { useLocation } from 'react-router';
 
 function Contact() {
+    const location = useLocation()
 
     const [state, setstate] = useState({
         name: "",
@@ -11,6 +13,7 @@ function Contact() {
         phone: "",
         message: ""
     })
+
     const [notification, setnotification] = useState({
         message: "",
         color: ""
@@ -52,11 +55,11 @@ function Contact() {
                     {/* <h1 className="brand"><span>Acme</span> Web Design</h1> */}
                     <div className="wrapper animated bounceInLeft">
                         <div className="company-info">
-                            <h3><strong>उम्मीद</strong></h3>
+                            <h3><strong>{location.state.name}</strong></h3>
                             <ul>
-                                <li><i className="fa fa-road"></i> NIT Agartala,Jirania - 799046</li>
-                                <li><i className="fa fa-phone"></i> +91 7005754016</li>
-                                <li><i className="fa fa-envelope"></i> umeedconnect@gmail.com</li>
+                                <li><i className="fa fa-road"></i> {location.state.address.city},{location.state.address.state} - {location.state.address.pincode} </li>
+                                <li><i className="fa fa-phone"></i>  {location.state.telephone}</li>
+                                <li><i className="fa fa-envelope"></i> {location.state.email}</li>
 
                             </ul>
                         </div>
