@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Signupascontributor.css";
+import style from  "./module.Signupascontributor.css";
 import img1 from "./images/signup.jpg";
 import {
   createUserWithEmailAndPassword,
@@ -44,7 +44,7 @@ function SignupNGO({ history }) {
           axios
             .post("http://localhost:5000/ngo/update", info)
             .then((res) => {
-              history.push("/welcome");
+              console.log(res);
             })
             .catch((error) => {
               setMessage(error.message);
@@ -58,12 +58,12 @@ function SignupNGO({ history }) {
   };
   return (
     <>
-      <div class="page">
-        <div class="nav-bar">
-          <div class="logo dj a">
+      <div class={style.page}>
+        <div class={style.nav-bar}>
+          <div class={'${logo}, ${dj}, ${a}'}>
             <a href="/">Umeed</a>
           </div>
-          <div class="nav-btn ">
+          <div class={style.nav-btn}>
             <ul>
               <li>
                 <a class="" href="/">
@@ -72,11 +72,11 @@ function SignupNGO({ history }) {
               </li>
             </ul>
           </div>
-          <div class="burger-nav">
-            <i class="fas fa-bars"></i>
+          <div class={style.burger-nav}>
+            <i class={'${fas}, ${fa-bars}'}></i>
           </div>
         </div>
-        <div class="nav-btn-slide ">
+        <div class={style.nav-btn-slide}>
           <ul>
             <li>
               <a class="" href="/">
@@ -86,14 +86,14 @@ function SignupNGO({ history }) {
           </ul>
         </div>
 
-        <div class="container">
+        <div class={style.container}>
           <img src={img1} alt=""></img>
-          <div class="details">
-            <div class="option">
-              <div class="loginbtn">Login</div>
-              <div class="registerbtn">Register</div>
+          <div class={style.details}>
+            <div class={style.option}>
+              <div class={style.loginbtn}>Login</div>
+              <div class={style.registerbtn}>Register</div>
             </div>
-            <div class="heading">
+            <div class={style.heading}>
               <h1>Welcome</h1>
               <h3>CREATE YOUR ACCOUNT</h3>
             </div>
@@ -158,7 +158,7 @@ function SignupNGO({ history }) {
 
               {message.length > 0 && <span id="message">{message}</span>}
 
-              <div class="submitbtn" onClick={handleSubmit}>
+              <div class={style.submitbtn} onClick={handleSubmit}>
                 SUBMIT
               </div>
             </form>
