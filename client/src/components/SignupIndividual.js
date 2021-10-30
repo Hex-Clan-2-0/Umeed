@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./SignupasIndividual.css";
+import style from "./module.SignupasIndividual.css";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -59,12 +59,12 @@ function SignupIndividual({ history }) {
 
   return (
     <>
-      <div class="page">
-        <div class="nav-bar">
-          <div class="logo dj a">
+      <div class={style.page}>
+        <div class={style.nav-bar}>
+          <div class={'${logo}, ${dj}, ${a}'}>
             <a href="/">Umeed</a>
           </div>
-          <div class="nav-btn ">
+          <div class={style.nav-btn}>
             <ul>
               <li>
                 <a class="" href="/">
@@ -73,11 +73,11 @@ function SignupIndividual({ history }) {
               </li>
             </ul>
           </div>
-          <div class="burger-nav">
-            <i class="fas fa-bars"></i>
+          <div class={style.burger-nav}>
+            <i class={'${fas}, ${fa-bars}'}></i>
           </div>
         </div>
-        <div class="nav-btn-slide ">
+        <div class={style.nav-btn-slide}>
           <ul>
             <li>
               <a class="" href="/">
@@ -87,18 +87,18 @@ function SignupIndividual({ history }) {
           </ul>
         </div>
 
-        <div class="container">
+        <div class={style.container}>
           {/* <img src={img1} alt=""></img> */}
-          <div class="details">
-            <div class="option">
-              <div class="loginbtn">Login</div>
-              <div class="registerbtn">Register</div>
+          <div class={style.details}>
+            <div class={style.option}>
+              <div class={style.loginbtn}>Login</div>
+              <div class={style.registerbtn}>Register</div>
             </div>
-            <div class="heading">
+            <div class={style.heading}>
               <h1>Welcome</h1>
               <h3>CREATE YOUR ACCOUNT</h3>
             </div>
-            <form action="" id="signupForm">
+            <form action="" id={style.signupForm}>
               <label for="name">Name </label>
               <input
                 type="text"
@@ -115,7 +115,7 @@ function SignupIndividual({ history }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="Pwd">Password</label>
+              <label for="pwd">Password</label>
               <input
                 type="password"
                 name=""
@@ -167,7 +167,7 @@ function SignupIndividual({ history }) {
 
               {message.length > 0 && <span id="message">{message}</span>}
 
-              <div class="submitbtn" onClick={handleSubmit}>
+              <div class={style.submitbtn} onClick={handleSubmit}>
                 SUBMIT
               </div>
             </form>
