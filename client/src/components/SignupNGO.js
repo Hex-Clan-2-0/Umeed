@@ -7,7 +7,7 @@ import {
   updateProfile,
 } from "@firebase/auth";
 import axios from "axios";
-function SignupNGO() {
+function SignupNGO({ history }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +21,9 @@ function SignupNGO() {
 
   useEffect(() => {});
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     let info = {
       name,
       email,
@@ -119,6 +121,14 @@ function SignupNGO() {
                 id="Pwd"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+              />
+              <label for="telephone">Phone Number</label>
+              <input
+                type="text"
+                name=""
+                id="telephone"
+                value={telephone}
+                onChange={(e) => setTelephone(e.target.value)}
               />
               <label for="address">Address</label>
               <label for="city">City</label>
