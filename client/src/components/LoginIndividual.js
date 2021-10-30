@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useEffect, useState } from "react";
-import "./Loginasindividual.css";
+import style from './module.Loginasindividual.css';
 function LoginIndividual({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,12 +24,12 @@ function LoginIndividual({ history }) {
   };
   return (
     <>
-      <div class="container">
-        <div class="nav-bar">
-          <div class="logo dj a">
+      <div class={style.container}>
+        <div class={style.nav-bar}>
+          <div class={'${logo}, ${dj}, ${a}'}>
             <a href="/">Umeed</a>
           </div>
-          <div class="nav-btn ">
+          <div class={style.nav-btn}>
             <ul>
               <li>
                 <a class="" href="/">
@@ -38,11 +38,11 @@ function LoginIndividual({ history }) {
               </li>
             </ul>
           </div>
-          <div class="burger-nav">
-            <i class="fas fa-bars"></i>
+          <div class={style.burger-nav}>
+            <i class={'${fas}, ${fa-bars}'}></i>
           </div>
         </div>
-        <div class="nav-btn-slide ">
+        <div class={style.nav-btn-slide}>
           <ul>
             <li>
               <a class="" href="/">
@@ -57,40 +57,40 @@ function LoginIndividual({ history }) {
           </ul>
         </div>
 
-        <div class="details">
-          <div class="heading">
+        <div class={style.details}>
+          <div class={style.heading}>
             <h1>Login</h1>
             <h3>Please login to continue as Individual.</h3>
           </div>
-          <div class="twoBtns">
-            <div class="login">Login</div>
-            <div class="register">Register</div>
+          <div class={style.twoBtns}>
+            <div class={style.login}>Login</div>
+            <div class={style.register}>Register</div>
           </div>
           <form action="">
             <label for="Email">Email</label>
             <input
-              type="email"
+              type="Email"
               name=""
               id="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label for="Pwd">Password</label>
+            <label for="pwd">Password</label>
             <input
               type="password"
               name=""
-              id="Pwd"
+              id="pwd"
               onChange={(e) => setPassword(e.target.value)}
             />
             {message.length > 0 && <span id="message">{message}</span>}
 
-            <div class="options">
-              <div class="submit" onClick={handeSubmit}>
+            <div class={style.options}>
+              <div class={style.submit} onClick={handeSubmit}>
                 Submit
               </div>
             </div>
           </form>
         </div>
-        <div class="pic">Keeping You Close!</div>
+        <div class={style.pic}>Keeping You Close!</div>
       </div>
     </>
   );
