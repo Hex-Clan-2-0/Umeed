@@ -27,6 +27,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Land} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/welcome" exact component={Welcome} />
         <Route path="/ngo" exact component={NgoList} />
         <Route path="/ngo/login" exact component={LoginNGO} />
         <Route path="/ngo/register" exact component={SignupNGO} />

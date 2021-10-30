@@ -44,7 +44,7 @@ function SignupNGO({ history }) {
           axios
             .post("http://localhost:5000/ngo/update", info)
             .then((res) => {
-              console.log(res);
+              history.push("/welcome");
             })
             .catch((error) => {
               setMessage(error.message);
