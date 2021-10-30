@@ -1,16 +1,18 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useState } from "react";
 import "./Loginascontributor.css";
-function LoginNGO() {
+function LoginNGO({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const auth = getAuth();
 
-  const handeSubmit = () => {
+  const handeSubmit = (e) => {
+    e.preventDefault();
+
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        //history.push("/")
+        history.push("/");
       })
       .catch((error) => {
         //show errors
