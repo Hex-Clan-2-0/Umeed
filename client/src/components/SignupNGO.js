@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from  "./module.Signupascontributor.css";
+import style from  "./Signupascontributor.module.css";
 import img1 from "./images/signup.jpg";
 import {
   createUserWithEmailAndPassword,

@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './module.land.css';
+import style from './land.module.css';
 function Land() {
     return (
         <div class={style.containerA}>

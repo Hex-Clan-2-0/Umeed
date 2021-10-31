@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from "./module.SignupasIndividual.css";
+import style from "./SignupasIndividual.module.css";
 import {
   createUserWithEmailAndPassword,
   getAuth,

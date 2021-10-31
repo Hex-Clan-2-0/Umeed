@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useState } from "react";
-import style from "./module.Loginascontributor.css";
+import style from "./Loginascontributor.module.css";
 function LoginNGO({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,11 +22,11 @@ function LoginNGO({ history }) {
   return (
     <>
       <div class={style.container}>
-        <div class={style.nav-bar}>
+        <div class={style.navbar}>
           <div class={'${logo}, ${dj}, ${a}'}>
             <a href="/">Umeed</a>
           </div>
-          <div class={style.nav-btn}>
+          <div class={style.navbtn}>
             <ul>
               <li>
                 <a class="" href="/">
@@ -35,11 +35,11 @@ function LoginNGO({ history }) {
               </li>
             </ul>
           </div>
-          <div class={style.burger-nav}>
+          <div class={style.burgernav}>
             <i class={'${fas}, ${fa-bars}'}></i>
           </div>
         </div>
-        <div class={style.nav-btn-slide }>
+        <div class={style.navbtnslide }>
           <ul>
             <li>
               <a class="" href="/">

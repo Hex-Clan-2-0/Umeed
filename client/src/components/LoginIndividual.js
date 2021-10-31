@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useEffect, useState } from "react";
-import style from './module.Loginasindividual.css';
+import style from './Loginasindividual.module.css';
 function LoginIndividual({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ function LoginIndividual({ history }) {
     <>
       <div class={style.container}>
         <div class={style.navbar}>
-          <div class={'${logo}, ${dj}, ${a}'}>
+          <div class={'${logo} ${dj} ${a}'}>
             <a href="/">Umeed</a>
           </div>
           <div class={style.navbtn}>
@@ -39,7 +39,7 @@ function LoginIndividual({ history }) {
             </ul>
           </div>
           <div class={style.burgernav}>
-            <i class={'${fas}, ${fabars}'}></i>
+            <i class={'${fas} ${fa-bars}'}></i>
           </div>
         </div>
         <div class={style.navbtnslide}>
