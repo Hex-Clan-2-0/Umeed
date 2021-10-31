@@ -60,11 +60,11 @@ function SignupIndividual({ history }) {
   return (
     <>
       <div class={style.page}>
-        <div class={style.nav-bar}>
-          <div class={'${logo}, ${dj}, ${a}'}>
+        <div class={style.navbar}>
+          <div class={`${style.logo}, ${style.dj}, ${style.a}`}>
             <a href="/">Umeed</a>
           </div>
-          <div class={style.nav-btn}>
+          <div class={style.navbtn}>
             <ul>
               <li>
                 <a class="" href="/">
@@ -73,11 +73,11 @@ function SignupIndividual({ history }) {
               </li>
             </ul>
           </div>
-          <div class={style.burger-nav}>
-            <i class={'${fas}, ${fa-bars}'}></i>
+          <div class={style.burgernav}>
+            <i class={`${style.fas}, ${style.fabars}`}></i>
           </div>
         </div>
-        <div class={style.nav-btn-slide}>
+        <div class={style.navbtnslide}>
           <ul>
             <li>
               <a class="" href="/">
