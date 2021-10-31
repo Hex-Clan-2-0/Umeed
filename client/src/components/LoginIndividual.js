@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useEffect, useState } from "react";
 import style from './Loginasindividual.module.css';
+import { Link } from "react-router-dom"; 
 function LoginIndividual({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -63,8 +64,11 @@ function LoginIndividual({ history }) {
             <h3>Please login to continue as Individual.</h3>
           </div>
           <div class={style.twoBtns}>
+          <Link to ="/user/register">
+              <div class={style.register}>Register</div>
+          </Link>
             <div class={style.login}>Login</div>
-            <div class={style.register}>Register</div>
+            
           </div>
           <form action="">
             <label for="Email">Email</label>
