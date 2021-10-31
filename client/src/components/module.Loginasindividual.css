@@ -171,7 +171,7 @@ form {
   display: none !important;
 }
 
-.nav-bar {
+.navbar {
   background-color: #8db4e7ce;
   width: 100%;
   height: 60px;
@@ -196,7 +196,7 @@ form {
   width: fit-content;
   text-decoration: none;
 }
-.burger-nav {
+.burgernav {
   display: none;
   cursor: pointer;
 }
@@ -204,26 +204,26 @@ form {
   width: 40%;
   height: 100%;
 }
-.nav-btn-slide {
+.navbtnslide {
   display: none;
   width: 100%;
   z-index: 1;
   top: 0px;
   left: 0px;
 }
-.nav-btn ul {
+.navbtn ul {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: space-around;
   align-items: center;
 }
-.nav-btn li {
+.navbtn li {
   font-size: large;
   list-style: none;
   position: relative;
 }
-.nav-btn li::before {
+.navbtn li::before {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -233,13 +233,13 @@ form {
   width: 0%;
   transition: 0.4s;
 }
-.nav-btn li:hover::before {
+.navbtn li:hover::before {
   width: 100%;
   border: 1px solid white;
   background-color: white;
 }
 
-.nav-btn li a {
+.navbtn li a {
   text-decoration: none;
   color: white;
   font-weight: 600;
