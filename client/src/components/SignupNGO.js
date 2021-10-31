@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from  "./Signupascontributor.module.css";
+import style from "./Signupascontributor.module.css";
 import img1 from "./images/signup.jpg";
 import {
   createUserWithEmailAndPassword,
@@ -41,10 +41,11 @@ function SignupNGO({ history }) {
         // console.log(user);
 
         updateProfile(auth.currentUser, { displayName: name }).then(() => {
+          console.log("reached here backend update");
           axios
             .post("http://localhost:5000/ngo/update", info)
             .then((res) => {
-              console.log(res);
+              history.push("/welcome");
             })
             .catch((error) => {
               setMessage(error.message);

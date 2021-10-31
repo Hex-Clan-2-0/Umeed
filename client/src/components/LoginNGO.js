@@ -12,7 +12,7 @@ function LoginNGO({ history }) {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        history.push("/");
+        history.push("/welcome");
       })
       .catch((error) => {
         //show errors
@@ -23,7 +23,7 @@ function LoginNGO({ history }) {
     <>
       <div class={style.container}>
         <div class={style.navbar}>
-          <div class={'${logo}, ${dj}, ${a}'}>
+          <div class={"${logo}, ${dj}, ${a}"}>
             <a href="/">Umeed</a>
           </div>
           <div class={style.navbtn}>
@@ -36,10 +36,10 @@ function LoginNGO({ history }) {
             </ul>
           </div>
           <div class={style.burgernav}>
-            <i class={'${fas}, ${fa-bars}'}></i>
+            <i class={"${fas}, ${fa-bars}"}></i>
           </div>
         </div>
-        <div class={style.navbtnslide }>
+        <div class={style.navbtnslide}>
           <ul>
             <li>
               <a class="" href="/">

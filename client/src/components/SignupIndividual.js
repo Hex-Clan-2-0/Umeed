@@ -36,8 +36,8 @@ function SignupIndividual({ history }) {
         state: state,
       },
     };
-    createUserWithEmailAndPassword(auth, email, password).then(
-      (userCredential) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         updateProfile(auth.currentUser, { displayName: name })
           .then(() => {
             axios
@@ -53,8 +53,10 @@ function SignupIndividual({ history }) {
             setMessage(error.message);
             // ..
           });
-      }
-    );
+      })
+      .catch((error) => {
+        setMessage(error.message);
+      });
   };
 
   return (
