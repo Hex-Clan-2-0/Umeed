@@ -1,7 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useEffect, useState } from "react";
-import style from './Loginasindividual.module.css';
-import { Link } from "react-router-dom"; 
+import style from "./Loginasindividual.module.css";
+import { Link } from "react-router-dom";
 function LoginIndividual({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,7 @@ function LoginIndividual({ history }) {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        history.push("/welcome");
+        history.push("/ngo");
       })
       .catch((error) => {
         //show errors
@@ -27,7 +27,7 @@ function LoginIndividual({ history }) {
     <>
       <div class={style.container}>
         <div class={style.navbar}>
-          <div class={'${logo} ${dj} ${a}'}>
+          <div class={"${logo} ${dj} ${a}"}>
             <a href="/">Umeed</a>
           </div>
           <div class={style.navbtn}>
@@ -40,7 +40,7 @@ function LoginIndividual({ history }) {
             </ul>
           </div>
           <div class={style.burgernav}>
-            <i class={'${fas} ${fa-bars}'}></i>
+            <i class={"${fas} ${fa-bars}"}></i>
           </div>
         </div>
         <div class={style.navbtnslide}>
@@ -64,11 +64,10 @@ function LoginIndividual({ history }) {
             <h3>Please login to continue as Individual.</h3>
           </div>
           <div class={style.twoBtns}>
-          <Link to ="/user/register">
+            <Link to="/user/register">
               <div class={style.register}>Register</div>
-          </Link>
+            </Link>
             <div class={style.login}>Login</div>
-            
           </div>
           <form action="">
             <label for="Email">Email</label>

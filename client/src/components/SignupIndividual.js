@@ -43,7 +43,7 @@ function SignupIndividual({ history }) {
             axios
               .post("http://localhost:5000/user/create", info)
               .then((res) => {
-                history.push("/welcome");
+                history.push("/ngo");
               })
               .catch((error) => {
                 setMessage(error.message);
