@@ -36,14 +36,14 @@ function SignupIndividual({ history }) {
         state: state,
       },
     };
-    createUserWithEmailAndPassword(auth, email, password).then(
-      (userCredential) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         updateProfile(auth.currentUser, { displayName: name })
           .then(() => {
             axios
               .post("http://localhost:5000/user/create", info)
               .then((res) => {
-                history.push("/welcome");
+                history.push("/ngo");
               })
               .catch((error) => {
                 setMessage(error.message);
@@ -53,8 +53,10 @@ function SignupIndividual({ history }) {
             setMessage(error.message);
             // ..
           });
-      }
-    );
+      })
+      .catch((error) => {
+        setMessage(error.message);
+      });
   };
 
   return (
